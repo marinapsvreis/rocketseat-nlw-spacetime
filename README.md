@@ -63,3 +63,24 @@ obs: O nome da migration dado foi create users table
 ```npm i @prisma/client``` -> liberando o prisma para ser importado no nosso server.ts
 
 8) Criamos a configuração para conseguir obter todos os usuários do nosso banco
+
+
+Passo a passo da configuração do frontend:
+
+```npx create-next-app@latest web --use-npm``` -> comando para criar o projeto com nextjs (selecionou sim para todas as opções)
+
+```npm run dev``` -> comando para rodar o projeto
+
+1) Deletou o README.md, os svgs na pasta public, o favicon da pasta app, editou o globals.css deixando só as 3 primeiras linhas e apagou no arquivo page.tsx todo o conteudo html no return e substituiu por Hello World
+
+2) Criamos a pasta components e incluimos o componente Button la dentro
+
+3) Repassou os conceitos importantes como o de componentes, propriedades, tipagem de propriedades.
+
+4) Explicou sobre roteamento com Next.js (todo arquivo que for um page.tsx dentro de uma pasta automaticamente será uma rota "com o nome da pasta/componente" da nossa aplicação) -> Tudo isso deverá estar dentro da pasta app
+
+5) Apresentou o tailwind e exemplificou como usar
+
+6) Rodou o comando ```npm i @rocketseat/eslint-config -D``` para utilizarmos a configuração do eslint da rocketseat para react
+
+7) Instalou o plugin ``` npm i prettier-plugin-tailwindcss -D``` que é responsavel por organizar as classes do tailwind de maneira semantica
