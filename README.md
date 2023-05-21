@@ -361,3 +361,11 @@ obs: Também adicionamos no arquivo server o seguinte import: ```import 'dotenv/
       expiresIn: '30 days',
   })
  ```
+
+ 9) Agora todas as rotas são autenticadas no backend.
+
+ 10) Instalamos o axios no frontend com ```npm i axios``` para podermos obter o codigo da página de callback do sign in.
+
+ 11) Tive que corrigir o retorno do register para um objeto com token, pois estava retornando undefined quando tentava obter o token no frontend.
+
+ 12) Terminamos de configurar o arquivo route.ts para que ele redirecione o usuario para uma rota e salve nos cookies o token, liberando o acesso dele em todas as rotas
