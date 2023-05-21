@@ -464,4 +464,9 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 13) Instalamos um pacote com o seguinte comando ```npm i @fastify/static``` para que seja possivel acessar as imagens pela rota delas
 
+####Aula 5
+
+1) Vamos criar o preview da imagem anexada na aplicação web
+
+
 
