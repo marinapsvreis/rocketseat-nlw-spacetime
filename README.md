@@ -368,4 +368,4 @@ obs: Também adicionamos no arquivo server o seguinte import: ```import 'dotenv/
 
  11) Tive que corrigir o retorno do register para um objeto com token, pois estava retornando undefined quando tentava obter o token no frontend.
 
- 12) Terminamos de configurar o arquivo route.ts para que ele redirecione o usuario para uma rota e salve nos cookies o token, liberando o acesso dele em todas as rotas
+ 12) Terminamos de configurar o arquivo route.ts para que ele redirecione o usuario para uma rota e salve nos cookies o token, liberando o acesso dele em todas as rotas com uma validade de 30 dias
