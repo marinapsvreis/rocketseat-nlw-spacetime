@@ -1,14 +1,15 @@
 import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
+import { useRouter } from 'expo-router'
+import * as SecureStore from 'expo-secure-store'
 import { StatusBar } from 'expo-status-bar'
 import { styled } from 'nativewind'
 import { useEffect } from 'react'
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native'
-import * as SecureStore from 'expo-secure-store'
 
 import {
-  Roboto_400Regular,
-  Roboto_700Bold,
-  useFonts,
+    Roboto_400Regular,
+    Roboto_700Bold,
+    useFonts,
 } from '@expo-google-fonts/roboto'
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
@@ -28,6 +29,8 @@ const discovery = {
 }
 
 export default function App() {
+  const router = useRouter()
+
   const [hasLoadedFonts] = useFonts({
     Roboto_400Regular,
     Roboto_700Bold,
@@ -45,6 +48,18 @@ export default function App() {
     discovery,
   )
 
+  async function handleGithubOAuthCode(code: string) {
+    const response = await api.post('/register', {
+      code,
+    })
+
+    const { token } = response.data
+
+    await SecureStore.setItemAsync('token', token)
+
+    router.push('/memories')
+  }
+
   useEffect(() => {
     // console.log(
     //   makeRedirectUri({
@@ -55,16 +70,7 @@ export default function App() {
     if (response?.type === 'success') {
       const { code } = response.params
 
-      api
-        .post('/register', {
-          code,
-        })
-        .then((response) => {
-          const { token } = response.data
-
-          SecureStore.setItemAsync('token', token)
-        })
-        .catch((err) => console.log(err))
+      handleGithubOAuthCode(code)
     }
   }, [response])
 
