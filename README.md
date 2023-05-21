@@ -369,3 +369,24 @@ obs: Também adicionamos no arquivo server o seguinte import: ```import 'dotenv/
  11) Tive que corrigir o retorno do register para um objeto com token, pois estava retornando undefined quando tentava obter o token no frontend.
 
  12) Terminamos de configurar o arquivo route.ts para que ele redirecione o usuario para uma rota e salve nos cookies o token, liberando o acesso dele em todas as rotas com uma validade de 30 dias
+
+ 13) Permitir que todas as páginas acessem os cookies e verificar se existe um cookie com o token informando assim que o usuario estaria logado
+ ```
+ import { cookies } from 'next/headers'
+
+ const isAuthenticated = cookies().has('token')
+ ```
+
+ 14) Para decodificar o token jwt presente nos cookies instalamos a biblioteca ```npm i jwt-decode```
+
+ 15) Criando o componente de profile para aparecer apenas quando o usuario estiver logado
+
+ 16) Precisamos permitir no next.config.js quais dominios podem carregar imagens externas com:
+ ```
+  const nextConfig = {
+    images: {
+      domains: ['avatars.githubusercontent.com'],
+    },
+  }
+```
+17) Configuramos demais elementos do profile como nome e link para quero sair que ainda não possui rota.
