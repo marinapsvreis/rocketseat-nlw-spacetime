@@ -468,7 +468,7 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 1) Vamos criar o preview da imagem anexada na aplicação web
 
-2) 
+2) Agora estamos logando os dados do formulário para confirmar que vamos salvar de maneira correta nossa memória
 
 
 
