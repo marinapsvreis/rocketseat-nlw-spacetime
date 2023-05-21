@@ -220,3 +220,54 @@ Configurando o layout da parte mobile:
         },
   ```
   obs: Pronto agora basta usar as fontes com font-title, font-body ou font-alt. Lembrando que tem que remover o font-bold que estava antes.
+
+3) Criamos o blur e os stripes com imagem porque o css do react native é limitado e agora vamos instalar uma biblioteca para importar svgs
+  a) Resolvemos o import da imagem do blur que tava dando erro com o arquivo assets.d.ts para reconhecer arquivos *.png
+  ```declare module '*.png'```
+
+  b) Instalamos o React Native SVG Transformer: ```npx expo install react-native-svg``` e ```npm i react-native-svg-transformer -D```
+
+  c) Criamos um arquivo na raiz chamado metro.config.js com o seguite conteudo:
+  ```
+  const { getDefaultConfig } = require("expo/metro-config");
+
+  module.exports = (() => {
+    const config = getDefaultConfig(__dirname);
+
+    const { transformer, resolver } = config;
+
+    config.transformer = {
+      ...transformer,
+      babelTransformerPath: require.resolve("react-native-svg-transformer"),
+    };
+    config.resolver = {
+      ...resolver,
+      assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),
+      sourceExts: [...resolver.sourceExts, "svg"],
+    };
+
+    return config;
+  })();
+  ```
+
+  d) Inserir mais um bloco de código no addets.d.ts:
+  ```
+  declare module "*.svg" {
+    import React from 'react';
+    import { SvgProps } from "react-native-svg";
+    const content: React.FC<SvgProps>;
+    export default content;
+  }
+  ```
+
+  e) Apresentou o comando de limpar o cashe do expo sendo: ```npx expo start --clear```
+
+4) Habilitamos como usar o tailwind no svg dos stripes com:
+```
+import { styled } from 'nativewind'
+
+const StyledStripes = styled(Stripes)
+```
+obs: Trocando o componente do svg Stripes por StyledStripes
+
+5) Importamos o logo que é diferente do web e terminamos de estilizar o mobile com tailwindcss
