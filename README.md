@@ -444,4 +444,8 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 3) Estilizamos a tela de nova memória e precisamos instalar um pacote para editar o css do checkbox com o comando: ```npm i @tailwindcss/forms -D``` e adicionando esse require no fim do arquivo tailwind.config.js ```plugins: [require('@tailwindcss/forms')],```
 
+4) Criamos o restante do layout da página de nova memória
+
+5) Criamos uma proteção de rotas para as rotas que não podem ser acessadas sem estar logado com o middleware.ts
+
 
