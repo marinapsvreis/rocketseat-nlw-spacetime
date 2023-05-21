@@ -390,3 +390,5 @@ obs: Também adicionamos no arquivo server o seguinte import: ```import 'dotenv/
   }
 ```
 17) Configuramos demais elementos do profile como nome e link para quero sair que ainda não possui rota.
+
+18) Agora indo pro projeto mobile instalamos o pacote ```npx expo install expo-auth-session expo-crypto```
