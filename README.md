@@ -454,4 +454,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 8) Trocamos pro projeto mobile e agora vamos configurar o layout por lá também.
 
+9) 
+
 
