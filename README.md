@@ -402,3 +402,7 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
     }),
   )
   ```
+
+20) Instalamos o axios com ```npm i axios``` e colocando o base url com o ip da minha máquina no momento.
+
+21) Obtemos o token no mobile
