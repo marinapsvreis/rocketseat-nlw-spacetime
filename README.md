@@ -440,4 +440,8 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 1) Aqui separamos o que é fixo de toda pagina(layout) e o que muda de acordo com a rota.
 
+2) Criamos a função de deslogar
+
+3) Estilizamos a tela de nova memória e precisamos instalar um pacote para editar o css do checkbox com o comando: ```npm i @tailwindcss/forms -D``` e adicionando esse require no fim do arquivo tailwind.config.js ```plugins: [require('@tailwindcss/forms')],```
+
 
