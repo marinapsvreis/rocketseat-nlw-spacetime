@@ -448,4 +448,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 5) Criamos uma proteção de rotas para as rotas que não podem ser acessadas sem estar logado com o middleware.ts
 
+6) Ajustamos os redirects para que o usuario consiga ir para onde estava indo caso queira acessar a tela de criação de nova memória não esteja logado, ele é redirecionado para login e depois novamente para nova memória.
+
 
