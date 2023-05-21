@@ -271,3 +271,50 @@ const StyledStripes = styled(Stripes)
 obs: Trocando o componente do svg Stripes por StyledStripes
 
 5) Importamos o logo que é diferente do web e terminamos de estilizar o mobile com tailwindcss
+
+
+Configurando melhor o backend:
+
+1) Configuramos as tabelas e relacionamentos do banco de dados e depois disso rodamos o comando npx prisma migrate dev e ao encontrarmos um erro executamos o ```npx prisma migrate reset``` por conta do usuário que haviamos criado na aula passada que gerou conflito por não possuir todos os campos. Novamente depois isso executamos o ```npx prisma migrate dev``` e nomeamos a migration como: create memories table.
+
+2) Separamos a estrutura do projeto em relação as rotas e o prisma em lib, routes e server
+
+3) Criamos a rota de obter todas as memórias pegando só os 115 primeiros caracteres do conteudo
+
+4) Instalamos o zod pra poder usar validação na rota de pegar uma memória por id com o comando ```npm i zod```
+
+5) Explicou sobre como validar campos da requisição de obter uma memória pelo id conforme abaixo:
+```
+const paramsSchema = z.object({
+      id: z.string().uuid(),
+    })
+
+const { id } = paramsSchema.parse(request.params)
+```
+
+6) Começamos a rota do post e explicou as validações para o post: 
+```
+const bodySchema = z.object({
+      content: z.string(),
+      coverUrl: z.string(),
+      isPublic: z.coerce.boolean().default(false)
+    })
+    
+const { content, coverUrl, isPublic } = bodySchema.parse(request.body)
+```
+obs: O coerce serve para converter o valor boolean que viria do formulario como (0, undefined...) em true e false
+
+7) Criando o metodo para delete copiando praticamente tudo do getById.
+
+8) Criando o metodo de put que foi uma mistura do post com o getById.
+
+9) Diferentemente do diego validei tudo pelo meu insomnia.
+
+10) Instalando o plugin de CORS ```npm i @fastify/cors``` e adicionamos as seguintes linhas no server.ts:
+```
+import cors from '@fastify/cors'
+
+app.register(cors, {
+  origin: true, // todas URLs de front-end poderão acessar nosso back-end
+})
+```
