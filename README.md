@@ -452,4 +452,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 7) Adicionamos a funcionalidade do cadastrar lembrança.
 
+8) Trocamos pro projeto mobile e agora vamos configurar o layout por lá também.
+
 
