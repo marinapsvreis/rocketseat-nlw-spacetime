@@ -337,3 +337,27 @@ sendo depois do ? o codigo que precisamos
 obs: Também adicionamos no arquivo server o seguinte import: ```import 'dotenv/config'```
 
 6) Instalamos o axios com o comando ```npm i axios``` e configuramos a rota para obter o codigo de autenticação
+
+7) Salvamos o usuario no banco de dados caso ele ainda não seja registrado
+
+8) Instalamos o ```npm i @fastify/jwt```
+ a) Registramos o jwt no server.ts conforme abaixo:
+ ```
+  import jwt from '@fastify/jwt'
+
+  app.register(jwt, {
+    secret: 'spacetime',
+  })
+ 
+ ```
+
+ b) Agora retornaremos o token ao em vez do usuario na rota de autenticação:
+ ```
+  const token = app.jwt.sign({
+      name: user.name,
+      avatar: user.avatar
+  }, {
+      sub: user.id,
+      expiresIn: '30 days',
+  })
+ ```
