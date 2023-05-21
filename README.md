@@ -438,4 +438,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 ####Aula 4
 
+1) Aqui separamos o que é fixo de toda pagina(layout) e o que muda de acordo com a rota.
+
 
