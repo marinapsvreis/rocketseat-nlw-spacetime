@@ -456,4 +456,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 9) Definimos as rotas iniciais e testamos se o usuario está logado ou não para sofrer um redirect
 
+10) Criamos a tela de nova memória do mobile
+
 
