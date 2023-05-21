@@ -436,3 +436,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 27) Configurando a rota de redirect após login do usuário para ser a tela de memories e ajustando o App.tsx dentro da pasta app como index.tsx e criando o memories.tsx também.
 
 
+####Aula 4
+
+
