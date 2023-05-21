@@ -318,3 +318,15 @@ app.register(cors, {
   origin: true, // todas URLs de front-end poderão acessar nosso back-end
 })
 ```
+
+####Aula 3
+
+1) Criamos a aplicação OAuth no github
+
+2) Configuramos as variaveis de ambiente para autenticar via github nos .env.local (web) e .env (server)
+
+3) Configuramos para obter o github code, fomos no page.tsx e configuramos o href do sign in para a seguinte rota:
+```href={`https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}`}```
+obs: Ali obtemos de volta no nosso callback o seguinte endereço:
+```http://localhost:3000/api/auth/callback?code=bb36402d85cd68ab0a55```
+sendo depois do ? o codigo que precisamos
