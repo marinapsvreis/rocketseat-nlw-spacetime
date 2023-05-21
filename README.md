@@ -176,3 +176,5 @@ export const metadata = {
 ```
 
 5) Começamos a criar o layout da home dividindo em coluna esquerda e direita e suas devidas estilizações.
+
+6) Instalamos o pacote de icones ```npm i lucide-react```
