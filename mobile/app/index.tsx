@@ -1,6 +1,9 @@
-import * as SecureStore from 'expo-secure-store'
+import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
 import { StatusBar } from 'expo-status-bar'
+import { styled } from 'nativewind'
+import { useEffect } from 'react'
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native'
+import * as SecureStore from 'expo-secure-store'
 
 import {
   Roboto_400Regular,
@@ -10,13 +13,10 @@ import {
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
 
-import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
-import { styled } from 'nativewind'
-import { useEffect } from 'react'
-import blurBg from './src/assets/bg-blur.png'
-import NLWLogo from './src/assets/nlw-spacetime-logo.svg'
-import Stripes from './src/assets/stripes.svg'
-import { api } from './src/lib/api'
+import blurBg from '../src/assets/bg-blur.png'
+import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
+import Stripes from '../src/assets/stripes.svg'
+import { api } from '../src/lib/api'
 
 const StyledStripes = styled(Stripes)
 
@@ -34,7 +34,7 @@ export default function App() {
     BaiJamjuree_700Bold,
   })
 
-  const [request, response, signInWithGithub] = useAuthRequest(
+  const [, response, signInWithGithub] = useAuthRequest(
     {
       clientId: '7d3bd65414375ab90954',
       scopes: ['identity'],

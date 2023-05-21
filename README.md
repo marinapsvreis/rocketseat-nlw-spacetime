@@ -407,4 +407,30 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 21) Obtemos o token no mobile e depois instalamos o ```npx expo install expo-secure-store``` porque no ambiente mobile não temos cookies
 
-22) 
+22) Salvamos o token o secure store
+
+23) Instalamos o expo router ```npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar react-native-gesture-handler```
+
+24) Criamos o arquivo index.js na raiz do projeto contendo apenas: ```import 'expo-router/entry'```
+
+25) Fizemos algumas alterações no package.json do projeto como por exemplo:
+  a) Trocamos o main:
+  ```
+  "main": "index.js",
+  ```
+
+  b) Inserimos no final:
+  ```
+  "overrides": {
+    "metro": "0.76.0",
+    "metro-resolver": "0.76.0"
+  },
+  ```
+
+26) Configuramos o plugin do babel.config.js:
+  ```
+  plugins: ['nativewind/babel', require.resolve('expo-router/babel')],
+  ```
+  obs: Adicionando o segundo plugin
+
+
