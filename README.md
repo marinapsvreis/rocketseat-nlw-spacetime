@@ -468,5 +468,7 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 1) Vamos criar o preview da imagem anexada na aplicação web
 
+2) 
+
 
 
