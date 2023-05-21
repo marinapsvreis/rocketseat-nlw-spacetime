@@ -117,3 +117,45 @@ plugins: ["nativewind/babel"],
 9) Instalamos o eslint com ```npm i eslint @rocketseat/eslint-config -D```
 
 10)Instalou o plugin ``` npm i prettier-plugin-tailwindcss -D``` que é responsavel por organizar as classes do tailwind de maneira semantica e configurou o arquivo prettier.config.js
+
+####Aula 2
+
+1) Configurando fontes com nextjs e tailwind: 
+    a) ir no arquivo layout.tsx e importar as fontes conforme abaixo:
+    ```
+    import {
+        Bai_Jamjuree as BaiJamjuree,
+        Roboto_Flex as Roboto,
+    } from 'next/font/google'
+    ```
+
+    b) atribuir elas as variaveis conforme abaixo: 
+    ```
+    const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
+    const baiJamjuree = BaiJamjuree({
+        subsets: ['latin'],
+        weight: '700',
+        variable: '--font-bai-jamjuree',
+    })
+    ```
+
+    c) tailwind.config.js alterar no tema para ficar conforme abaixo:
+    ```
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: 'var(--font-roboto)',
+                alt: 'var(--font-bai-jamjuree)',
+            },
+        },
+    },
+    ```
+
+    d) O html do layout.tsx deve ficar assim: 
+    ```
+    <html lang="en">
+      <body className={`${roboto.variable} ${baiJamjuree.variable} font-sans`}>
+        {children}
+      </body>
+    </html>
+    ```
