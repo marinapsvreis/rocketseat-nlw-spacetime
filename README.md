@@ -154,8 +154,25 @@ plugins: ["nativewind/babel"],
     d) O html do layout.tsx deve ficar assim: 
     ```
     <html lang="en">
-      <body className={`${roboto.variable} ${baiJamjuree.variable} font-sans`}>
+      <body
+        className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-900 font-sans text-gray-100`}
+      >
         {children}
       </body>
     </html>
     ```
+
+2) Importamos as cores do figma, copiei a paleta de cores do github da rocketseat e salvei no arquivo tailwind.config.js
+
+3) Baixamos o favicon renomeando para icon.png e colocando na pasta app que automaticamente o next já reconhece como favicon
+
+4) Para redefinir o title da pagina editar no layout.tsx conforme abaixo:
+```
+export const metadata = {
+  title: 'NLW Spacetime',
+  description:
+    'Uma capsula do tempo construída com React, Next.js, TailwindCSS e Typescript',
+}
+```
+
+5) Começamos a criar o layout da home dividindo em coluna esquerda e direita e suas devidas estilizações.
