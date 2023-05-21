@@ -458,4 +458,10 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 10) Criamos a tela de nova memória do mobile
 
+11) Partimos para o back para trabalhar com upload de arquivos e pra isso instalamos um plugin com o comando ```npm i @fastify/multipart```
+
+12) É possivel visualizar toda a lógica no arquivo upload.ts e acredito ser necessário revisar mais pra frente
+
+13) Instalamos um pacote com o seguinte comando ```npm i @fastify/static``` para que seja possivel acessar as imagens pela rota delas
+
 
