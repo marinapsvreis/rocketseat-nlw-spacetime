@@ -454,6 +454,6 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 8) Trocamos pro projeto mobile e agora vamos configurar o layout por lá também.
 
-9) 
+9) Definimos as rotas iniciais e testamos se o usuario está logado ou não para sofrer um redirect
 
 
