@@ -330,3 +330,10 @@ app.register(cors, {
 obs: Ali obtemos de volta no nosso callback o seguinte endereço:
 ```http://localhost:3000/api/auth/callback?code=bb36402d85cd68ab0a55```
 sendo depois do ? o codigo que precisamos
+
+4) Componentizamos a parte web da aplicação
+
+5) Para o backend (server) reconehcer suas respectivas variáveis de ambiente, precisamos instalar o pacote ```npm i dotenv -D```
+obs: Também adicionamos no arquivo server o seguinte import: ```import 'dotenv/config'```
+
+6) Instalamos o axios com o comando ```npm i axios``` e configuramos a rota para obter o codigo de autenticação
