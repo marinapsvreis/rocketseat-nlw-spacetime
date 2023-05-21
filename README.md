@@ -120,6 +120,8 @@ plugins: ["nativewind/babel"],
 
 ####Aula 2
 
+Configurando o layout da parte web:
+
 1) Configurando fontes com nextjs e tailwind: 
     a) ir no arquivo layout.tsx e importar as fontes conforme abaixo:
     ```
@@ -178,3 +180,43 @@ export const metadata = {
 5) Começamos a criar o layout da home dividindo em coluna esquerda e direita e suas devidas estilizações.
 
 6) Instalamos o pacote de icones ```npm i lucide-react```
+
+Configurando o layout da parte mobile:
+
+1) Copiamos as cores do tailwind.config.js do projeto web
+
+2) Instalamos o Expo Google Fonts ```npx expo install @expo-google-fonts/roboto @expo-google-fonts/bai-jamjuree expo-font```
+ 
+ a) Importamos as fontes no arquivo App.tsx:
+  ```
+  import {
+    Roboto_400Regular,
+    Roboto_700Bold,
+    useFonts,
+  } from '@expo-google-fonts/roboto'
+
+  import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
+  ```
+
+  b) Garantimos que as fontes só serão carregadas no App.tsx com:
+  ```
+  const [hasLoadedFonts] = useFonts({
+      Roboto_400Regular,
+      Roboto_700Bold,
+      BaiJamjuree_700Bold,
+    })
+
+    if (!hasLoadedFonts) {
+      return null
+    }
+  ```
+
+  c) Configuramos o fontFamily no tailwind.config.css:
+  ```
+  fontFamily: {
+          title: 'Roboto_700Bold',
+          body: 'Roboto_400Regular',
+          alt: 'BaiJamjuree_700Bold',
+        },
+  ```
+  obs: Pronto agora basta usar as fontes com font-title, font-body ou font-alt. Lembrando que tem que remover o font-bold que estava antes.
