@@ -83,4 +83,37 @@ Passo a passo da configuração do frontend:
 
 6) Rodou o comando ```npm i @rocketseat/eslint-config -D``` para utilizarmos a configuração do eslint da rocketseat para react
 
-7) Instalou o plugin ``` npm i prettier-plugin-tailwindcss -D``` que é responsavel por organizar as classes do tailwind de maneira semantica
+7) Instalou o plugin ``` npm i prettier-plugin-tailwindcss -D``` que é responsavel por organizar as classes do tailwind de maneira semantica e configurou o arquivo prettier.config.js
+
+Passo a passo da configuração do mobile:
+
+1) Rodamos o comando ```npx create-expo-app mobile``` para criar o projeto
+
+2) Trocamos o App.js para App.tsx e rodamos o comando ```npm run start``` e ele identificou que o projeto tem typescript e perguntou se gostariamos de configurar, só selecionar que sim.
+
+3) Explicou sobre as tags para o ambiente mobile, sobre como estilizar e sobre a unidade de medida dp que é diferente do px para web.
+
+4) Instalamos o nativewind com o comando: ```npm i nativewind``` e ```npm i tailwindcss -D```.
+
+5) Rodamos o comando ```npx tailwindcss init``` para criar o arquivo taildwind.config.js e depois adicionamos no arquivo criado a seguinte linha:
+```
+content: ["./App.tsx", "./app/**/*.tsx"],
+```
+
+6) Editamos o arquivo babel.config.js e adicionamos a linha (abaixo de presets):
+```
+plugins: ["nativewind/babel"],
+```
+
+7) Editamos também o arquivo tsconfig.json dentro de compilerOptions ficou assim:
+```
+"compilerOptions": {
+    "types": ["nativewind/types"]
+},
+```
+
+8) Aprendemos a estilizar com tailwind no mobile
+
+9) Instalamos o eslint com ```npm i eslint @rocketseat/eslint-config -D```
+
+10)Instalou o plugin ``` npm i prettier-plugin-tailwindcss -D``` que é responsavel por organizar as classes do tailwind de maneira semantica e configurou o arquivo prettier.config.js
