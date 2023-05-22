@@ -485,7 +485,9 @@ obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript 
 
 9) Configuramos para agora conseguir salvar uma memoria via app mobile
 
-10) Agora vamos para a listagem
+10) Agora vamos para a listagem tanto na web quanto no mobile
+
+11) Para formatação de datas no ambiente mobile nos usamos o ```npm i dayjs```
 
 
 
