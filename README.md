@@ -477,5 +477,11 @@ obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript 
 
 5) Obtemos o cookie e finalizamos o post de uma memória na aplicação web
 
+6) Agora passamos para a aplicação mobile para fazer o mesmo processo
+
+7) Para funcionar corretamente precisamos instalar o ```npx expo install expo-image-picker```
+
+8) Estilizamos e configuramos para quando selecionarmos uma imagem a mesma aparecer no preview do mobile
+
 
 
