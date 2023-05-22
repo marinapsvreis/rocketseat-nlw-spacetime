@@ -483,5 +483,9 @@ obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript 
 
 8) Estilizamos e configuramos para quando selecionarmos uma imagem a mesma aparecer no preview do mobile
 
+9) Configuramos para agora conseguir salvar uma memoria via app mobile
+
+10) Agora vamos para a listagem
+
 
 
