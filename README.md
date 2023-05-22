@@ -1,3 +1,15 @@
+## Imagens do projeto para web:
+
+![Web - Home](https://imgur.com/KsmYErG.png)
+![Web - Memories](https://imgur.com/kvk6Bo2.png)
+![Web - Memory](https://imgur.com/YTh6l9o.png)
+![Web - New Memory](https://imgur.com/NmZkTRT.png)
+
+## Imagens do projeto para mobile:
+
+![Mobile - Home](https://imgur.com/ANqBCq4.png)
+![Mobile - Memories](https://imgur.com/BXXpY6U.png)
+![Mobile - New Memory](https://imgur.com/i1kT0Pq.png)
 
 ## Comando para rodar os projetos:
 
