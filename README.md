@@ -470,5 +470,10 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 
 2) Agora estamos logando os dados do formulário para confirmar que vamos salvar de maneira correta nossa memória
 
+3) Confirmamos que o arquivo está sendo salvo em uploads, e tinha faltado criar essa pasta no server
+
+4) Agora vamos instalar o ```npm i js-cookie``` para facilitar buscar cookies em arquivos que estão usando o 'use client' do next.
+obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript com o comando: ```npm i --save-dev @types/js-cookie```
+
 
 
