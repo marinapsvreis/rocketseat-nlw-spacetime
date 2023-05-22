@@ -475,5 +475,7 @@ e adicionar no app.json a linha ```"scheme": "nlwspacetime",```
 4) Agora vamos instalar o ```npm i js-cookie``` para facilitar buscar cookies em arquivos que estão usando o 'use client' do next.
 obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript com o comando: ```npm i --save-dev @types/js-cookie```
 
+5) Obtemos o cookie e finalizamos o post de uma memória na aplicação web
+
 
 
