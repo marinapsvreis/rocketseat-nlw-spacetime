@@ -487,7 +487,7 @@ obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript 
 
 10) Agora vamos para a listagem tanto na web quanto no mobile
 
-11) Para formatação de datas no ambiente mobile nos usamos o ```npm i dayjs```
+11) Para formatação de datas no ambiente mobile e web nos usamos o ```npm i dayjs```
 
 
 
