@@ -1,6 +1,6 @@
 import Icon from '@expo/vector-icons/Feather'
 import * as ImagePicker from 'expo-image-picker'
-import { Link } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 import * as SecureStore from 'expo-secure-store'
 import { useState } from 'react'
 import { Image, ScrollView, Switch, Text, TextInput, View } from 'react-native'
@@ -11,6 +11,7 @@ import { api } from '../src/lib/api'
 
 export default function NewMemory() {
   const { bottom, top } = useSafeAreaInsets()
+  const router = useRouter()
 
   const [preview, setPreview] = useState<string | null>(null)
   const [isPublic, setIsPublic] = useState(false)
@@ -52,9 +53,23 @@ export default function NewMemory() {
       })
 
       coverUrl = uploadResponse.data.fileUrl
-
-      console.log(coverUrl)
     }
+
+    await api.post(
+      '/memories',
+      {
+        content,
+        isPublic,
+        coverUrl,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    )
+
+    router.push('/memories')
   }
 
   return (
