@@ -489,5 +489,11 @@ obs: Devemos instalar os tipos desse pacote para poder funcionar com typescript 
 
 11) Para formatação de datas no ambiente mobile e web nos usamos o ```npm i dayjs```
 
+#### Desafios extras sozinha
+
+1) Corrigi o link da primeira tela escrito "criar agora" para ir para tela de cadastrar lembrança
+
+2) Criei a página para ler mais sobre uma memória
+
 
 
